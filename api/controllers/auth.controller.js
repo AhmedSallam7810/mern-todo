@@ -2,7 +2,7 @@ const User=require("../DB/models/user.model")
 const bcrypt=require("bcrypt")
 const {generateToken}=require("../utils/jwt")
 const {successResponse,errorResponse,successTokenResponse}=require("../utils/response");
-const {userResource}=require("../resources/user.resource");
+const userResource=require("../resources/user.resource");
 
 const register=async(req,res)=>{
     const {name,email,password,phone}=req.body;
@@ -17,7 +17,7 @@ const register=async(req,res)=>{
     const hashPassword=bcrypt.hashSync(password,10)
     const user= User.create({name,email,password:hashPassword,phone});
 
-    successResponse(res,user,"registered successfully");
+    successResponse(res,userResource(user),"registered successfully");
     }catch(err){
         errorResponse(res,"Failed to register user")
     }
@@ -36,13 +36,7 @@ const login= async(req,res)=>{
     if(!isPasswordValid){
         return errorResponse(res,"Invalid password",400)
     }
-    const userData={
-        id:user._id,
-        name:user.name,
-        email:user.email,
-        phone:user.phone
-    };
-    successTokenResponse(res,userData,"Logged in successfully",token)
+    successTokenResponse(res,userResource(user),"Logged in successfully",token)
     }catch(err){
         errorResponse(res,"Failed to login")
     }

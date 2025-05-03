@@ -29,13 +29,16 @@ body, html {
   color: #000;
 }
 
-.content {
+.content-login {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   width: 100%;
-  max-width: 320px;
+  max-width: 420px;
   text-align: center;
 }
 

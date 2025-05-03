@@ -27,18 +27,8 @@ function Register() {
   };
 
   return (
-    <div className="container register-page">
-      <header className="header">
-        <div className="social-icons">
-          <a href="#">
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-linkedin"></i>
-          </a>
-        </div>
-      </header>
-      <div className="content register-content">
+    <div className="container register-page">       
+      <div className="content-register">
         <h4 className="sign-word">sign up</h4>
         <form onSubmit={handleSignup}>
           <input
@@ -72,7 +62,7 @@ function Register() {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           {signupError && (
-            <span style={{ marginBottom: "14px", fontSize: "18px" }}>
+            <span className="error-message">
               {signupError}
             </span>
           )}

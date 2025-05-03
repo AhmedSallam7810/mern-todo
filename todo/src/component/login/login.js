@@ -33,7 +33,7 @@ function Login() {
 
   return (
     <div className="container login-page">
-      <div className="content login-content">
+      <div className="content-login">
         <h4 className="sign-word">log in</h4>
         <form onSubmit={submitform}>
           <input

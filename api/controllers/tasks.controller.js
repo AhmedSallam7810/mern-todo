@@ -1,6 +1,6 @@
 const Task=require("../DB/models/task.model");
 const {successResponse,errorResponse}=require("../utils/response");
-const {taskResource}=require("../resources/task.resourse");
+const taskResource=require("../resources/task.resourse");
 
 
 const allTasks=async(req,res)=>{
