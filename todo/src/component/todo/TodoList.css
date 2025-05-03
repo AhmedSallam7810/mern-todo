@@ -1,0 +1,221 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+.navbar {
+  width: 100%;
+  background: #3182ce;
+  padding: 12px 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 16px;
+}
+
+.content {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  gap: 8px;
+}
+
+.todo-list li input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.todo-list li span {
+  padding: 0 8px;
+}
+
+.todo-list li span:nth-of-type(1) {
+  flex: 2;
+}
+
+.todo-list li span:nth-of-type(2) {
+  flex: 1.5;
+  color: #555;
+}
+
+.todo-list li span:nth-of-type(3) {
+  flex: 1;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.todo-list button {
+  margin-left: 8px;
+  padding: 4px 8px;
+  border: none;
+  background: #3182ce;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+.todo-list button:hover {
+  background: #2c5282;
+}
+
+.todo-list input[type="text"] {
+  flex: 1;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.add-task {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-task button {
+  padding: 8px 12px;
+  border: none;
+  background: #3182ce;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-task button:hover {
+  background: #2c5282;
+}
+
+.button-logout {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.button-logout:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Filter and search section */
+.filter-search {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.filter-search input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filter-search select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Completed task styling */
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Responsive widths */
+.content,
+.add-task,
+.filter-search {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Ensure inputs and lists scale */
+.add-task input,
+.filter-search input,
+.filter-search select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .add-task,
+  .filter-search {
+    flex-direction: column;
+  }
+
+  .add-task input,
+  .filter-search input,
+  .filter-search select {
+    margin: 0 0 8px 0;
+  }
+
+  .todo-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .todo-list li span,
+  .todo-list li button {
+    margin: 4px 0;
+  }
+}
