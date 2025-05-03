@@ -13,8 +13,8 @@ https://github.com/your-github-username/mern-todo
 
 ## Setup
 
-1. Clone repository
-   ```bash
+Clone repository
+```bash
    git clone https://github.com/your-github-username/mern-todo.git
    cd mern-todo
    ```
