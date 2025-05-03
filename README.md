@@ -8,9 +8,8 @@ https://github.com/your-github-username/mern-todo
 
 ## Prerequisites
 
-- Node.js v14+
+- Node.js
 - npm or yarn
-- MongoDB (local or Atlas)
 
 ## Setup
 
@@ -20,15 +19,6 @@ https://github.com/your-github-username/mern-todo
    cd mern-todo
    ```
 
-2. Create environment file in `api/`
-   ```bash
-   cp api/.env.example api/.env
-   ```
-   Fill in the following in `api/.env`:
-   ```env
-   MONGO_URI=<your MongoDB connection string>
-   PORT=5000
-   ```
 
 ## Install Dependencies
 
@@ -79,8 +69,3 @@ Your browser should open automatically. If not, visit http://localhost:3000.
 - react-router-dom
 - redux
 - redux-persist
-
-## Notes
-
-- Modify `proxy` in `todo/package.json` if using a different API port.
-- For production build, run `npm run build` in the `todo` folder.
